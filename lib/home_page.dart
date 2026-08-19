@@ -134,8 +134,8 @@ class _HomePageState extends State<HomePage> {
       _showSnack('API_BASE_URL ยังไม่ได้ตั้งค่า ดูวิธีตั้งค่าใน README');
       return;
     }
-    final baseUrl = AppConfig.apiBaseUrl;
-    final path = AppConfig.apiPath;
+    const baseUrl = AppConfig.apiBaseUrl;
+    const path = AppConfig.apiPath;
 
     if (_tab == _InputTab.text && _textController.text.trim().isEmpty) {
       _showSnack('กรุณากรอกข้อความ');

@@ -58,6 +58,8 @@ class ApiClient {
           )
           .timeout(const Duration(seconds: 60));
     } catch (e) {
+      // ignore: avoid_print
+      print('API request failed: ${e.runtimeType}: $e');
       throw ApiException(
         httpStatus: 0,
         code: 'NETWORK_ERROR',
